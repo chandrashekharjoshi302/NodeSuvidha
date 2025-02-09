@@ -13,9 +13,9 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/books", bookRoutes);
-// app.use("/hey", (req, res) => {
-//   res.send("hey");
-// });
+app.use("/hey", (req, res) => {
+  res.send("hey");
+});
 
 connectDB().then(() => {
   app.listen(7777, () => {
